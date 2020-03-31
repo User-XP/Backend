@@ -1,10 +1,11 @@
 {
-  "name": "dashboard",
+  "name": "userxp-dashboard",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dashboard and backend services for userxp.ga",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "author": "Shan Eapen Koshy",
   "license": "ISC",
@@ -19,5 +20,8 @@
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies" : {
+    "nodemon": "^2.0.2"
   }
 }
