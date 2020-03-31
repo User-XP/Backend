@@ -1,7 +1,17 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+const passport = require('passport');
 
+const initializePassport = require('./config/passport-setup')
+initializePassport(
+  passport,
+  email => users.find(user => user.email === email),
+  id => users.find(user => user.id === id)
+)
+
+/* Mongoose connection */
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/user', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
@@ -16,44 +26,68 @@ db.once('open', function (callback) {
 
 var app = express()
 
-
+app.set('view-engine','ejs');
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post('/sign_up', function (req, res) {
-	var name = req.body.name;
-	var email = req.body.email;
-	var pass = req.body.password;
-	var company = req.body.companyname;
-	var phone = req.body.phone;
 
-	var data = {
-		"name": name,
-		"email": email,
-		"password": pass,
-		"company-name": company,
-		"phone": phone
+app.get('/signup', function(req, res){
+	return res.render('signup.ejs');
+})
+
+app.post('/signup', async function (req, res) {
+
+	try {
+		const hashedPassword = await bcrypt.hash(req.body.password,10);
+		var data = {
+			"name": req.body.name,
+			"email": req.body.email,
+			"password": hashedPassword,
+			"company-name": req.body.companyname,
+			"phone": req.body.phone
+		}
+		db.collection('details').insertOne(data, function (err, collection) {
+			if (err) throw err;
+			console.log("Record inserted Successfully");
+		});
+
+		//redirect to login page
+		res.redirect('signup_success.html');
+
+	} catch(err) {
+		//if signup fails
+		res.redirect('registration-page.html');
 	}
-	db.collection('details').insertOne(data, function (err, collection) {
-		if (err) throw err;
-		console.log("Record inserted Successfully");
-
-	});
-
-	return res.redirect('signup_success.html');
+	
 })
 
-app.get('/',function(req,res){
-	return res.send("<p>Welcome! <a href='/signup'>Signup</a></p>")
+app.get('/login', checkNotAuthenticated, (req, res) => {
+	res.render('login.ejs')
+  })
+
+app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+	successRedirect: '/',
+	failureRedirect: '/login',
+	failureFlash: true
+}))
+
+function checkAuthenticated(req, res, next) {
+	if (req.isAuthenticated()) {
+	  return next()
+	}
+  
+	res.redirect('/login')
+  }
+  
+  function checkNotAuthenticated(req, res, next) {
+	if (req.isAuthenticated()) {
+	  return res.redirect('/dashboard')
+	}
+	next()
+  }
+
+
+app.listen(3000, function(){
+	console.log("server listening at port 3000");
 })
-
-app.get('/signup', function (req, res) {
-	res.set({
-		'Access-control-Allow-Origin': '*'
-	});
-	return res.redirect('registration-page.html');
-}).listen(3000)
-
-
-console.log("server listening at port 3000");

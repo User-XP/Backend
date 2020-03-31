@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | UserXP</title>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,500|Montserrat:300,400,700"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/app-assets/css/app.css">
+    <link rel="stylesheet" href="/app-assets/css/signup.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid userservice_section bg-white">
+            <div class="row align-items-center">
+                <div class="col-sm-6 left_part featuresSliderCol">
+                    <div class="clearfix m-auto"><a href="#" target="_blank" class="logo"><img
+                                src="/app-assets/img/logo.png" alt="UserXp" style="width:25%;"></a>
+                        <div class="trusted_by">
+                            <h2>Trusted By 100,000+ Users</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 right_part">
+                    <div class="clearfix registeraArea loginArea">
+                        <h1 class="form_title">Welcome Back !</h1><a href="/login/google" class="googleSignInBtn"><img
+                                src="/app-assets/img/google_favicon.svg" alt=""><span>Sign in with
+                                Google</span></a><span class="orsignup">- or Signin via email -</span>
+                        <form method="POST" action="#" class="form">
+                            <div class="form-group"><input type="email"
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" class="form-control "
+                                    placeholder="Email" name="email" value="" required autofocus></div>
+                            <div class="form-group password-group">
+                                <div class="input-group"><input type="password" name="password" class="form-control "
+                                        placeholder="Password" required id="userpassword">
+                                    <div class="input-group-append"><span class="input-group-text password-group-text"
+                                            onclick="togglePasswordVisibility(this, 'userpassword');">Show</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group"><button type="submit" class="btn btn-dark submit-btn">Login</button>
+                            </div>
+                            <div class="form-group"><label class="i_agree"><input type="checkbox"><samp
+                                        class="customcheckbox"></samp><span>Remember Me</span></label>
+                                <p class="termsAndService bold"><span class="clearfix"><span class="float-left"><a
+                                                href="/password/reset" class="ml-0">Forgot Password?</a></span><span
+                                            class="float-right">No account? <a href="/signup">Sign up</a></span></span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function togglePasswordVisibility(el, inputId) {
+            var x = document.getElementById(inputId);
+            if (x.type === "password") {
+                x.type = "text";
+                el.innerText = "Hide";
+            } else {
+                x.type = "password";
+                el.innerText = "Show";
+            }
+        }
+    </script>
+</body>
+
+</html>
