@@ -6,7 +6,7 @@ module.exports = {
         clientSecret: "2paby9Gn4oavqWXAoa86Delv"
     },
     mongodb: {
-        dbURI: "mongodb://localhost:27017/user"
+        dbURI: "mongodb://localhost:27017/userXP"
     },
     session: {
         cookieKey: "userXPSession"

@@ -10,6 +10,6 @@ const userSchema = new Schema({
 })
 
 //specify the collection to be used
-const User = mongoose.model('details', userSchema);
+const User = mongoose.model('users', userSchema);
 
 module.exports = User;
