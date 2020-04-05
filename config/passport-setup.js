@@ -62,8 +62,13 @@ passport.use(new localStrategy({
 
             if (!currentUser) {
                 return done(null, false, {
-                    message: 'Incorrect username.'
+                    message: 'Incorrect email.'
                 });
+            }
+
+            if(currentUser.googleID && !currentUser.hasOwnProperty('password')){
+                //googleID exists but local password is absent
+                return done(null, false, {message: 'Login with you Google ID'});
             }
 
             if(await bcrypt.compare(password,currentUser.password,function(err, isMatch){
