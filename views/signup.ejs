@@ -56,6 +56,11 @@
                                     placeholder="Company Name" name="organization_name" value=""></div>
                             <div class="form-group"><button type="submit" class="btn btn-dark submit-btn">Free Sign
                                     Up</button></div>
+                            <div class="form-group"><span class="error-text">
+                                        <% if(locals.message){ %>
+                                            <%= message %>
+                                        <% } %>
+                            </span></div>
                             <div class="form-group">
                                 <p class="termsAndService bold">Already have an account? <a href="/login">Sign In</a>
                                 </p>

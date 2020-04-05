@@ -26,7 +26,7 @@ passport.use(new GoogleStrategy({
  }, (accessToken,refreshToken,profile,done) => {
     //callback from passport strategy
     //check if user has already registered with google
-    console.log(profile)
+    // console.log(profile)
     User.findOne({googleID: profile.id}).then((currentUser) => {
         if(currentUser){
             //user exists
