@@ -52,6 +52,11 @@
                             </div>
                             <div class="form-group"><button type="submit" class="btn btn-dark submit-btn">Login</button>
                             </div>
+                            <div class="form-group"><span class="error-text">
+                                <% if(messages.error){ %>
+                                    <%= messages.error %>
+                                <% } %>
+                            </span></div>
                             <div class="form-group"><label class="i_agree"><input type="checkbox"><samp
                                         class="customcheckbox"></samp><span>Remember Me</span></label>
                                 <p class="termsAndService bold"><span class="clearfix"><span class="float-left"><a

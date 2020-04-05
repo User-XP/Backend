@@ -26,11 +26,22 @@ passport.use(new GoogleStrategy({
  }, (accessToken,refreshToken,profile,done) => {
     //callback from passport strategy
     //check if user has already registered with google
-    console.log(profile)
-    User.findOne({googleID: profile.id}).then((currentUser) => {
+    // console.log(profile)
+    User.findOne({email: profile._json.email}).then((currentUser) => {
         if(currentUser){
-            //user exists
-            console.log("User already exists: " + currentUser);
+            
+            if(!currentUser.googleID){
+                //email exists but user logging with google for first time
+                User.updateOne({"email": currentUser.email}, {$set: {"picture":profile._json.picture,"googleID": profile.id}}, (err, result) =>{
+                    if (err) {
+                        console.log('Error updating object: ' + err);
+                    } else {
+                        console.log('' + result + ' document(s) updated');
+                    }
+                });
+                console.log(currentUser.email,"added google profile details")
+            }
+
             done(null,currentUser);
         }else{
             new User({
@@ -62,8 +73,13 @@ passport.use(new localStrategy({
 
             if (!currentUser) {
                 return done(null, false, {
-                    message: 'Incorrect username.'
+                    message: 'Incorrect email.'
                 });
+            }
+
+            if(currentUser.googleID && !Boolean(currentUser.password)){
+                //googleID exists but local password is absent
+                return done(null, false, {message: 'Login with you Google ID'});
             }
 
             if(await bcrypt.compare(password,currentUser.password,function(err, isMatch){

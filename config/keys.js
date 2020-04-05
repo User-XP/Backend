@@ -9,6 +9,7 @@ module.exports = {
         dbURI: "mongodb://localhost:27017/userXP"
     },
     session: {
-        cookieKey: "userXPSession"
+        cookieKey: "userXPSession",
+        secretKey: "D)]2WngFY1xnpVs"
     }
 }
