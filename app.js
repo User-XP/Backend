@@ -11,6 +11,7 @@ const keys = require('./config/keys');
 //routes
 const authRoutes = require('./routes/auth-routes');
 const dashboardRoutes = require('./routes/dashboard-routes');
+const apiRoutes = require('./routes/api-routes');
 
 
 var app = express()
@@ -45,6 +46,7 @@ app.use(passport.session());
 
 app.use(authRoutes);
 app.use('/dashboard',dashboardRoutes);
+app.use(apiRoutes);
 app.use(express.static('public'));
 
 app.listen(3000, function(){
