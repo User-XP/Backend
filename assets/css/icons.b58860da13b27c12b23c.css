@@ -1,0 +1,1077 @@
+@font-face
+{
+	font-display: swap;
+	font-family: "paymo-icons";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/paymo-icons/fonts/paymo-icons.ttf?bvfeuv") format("truetype"),url("../fonts/paymo-icons/fonts/paymo-icons.woff?bvfeuv") format("woff"),url("../fonts/paymo-icons/fonts/paymo-icons.svg?bvfeuv#paymo-icons") format("svg");
+}
+[class^="icon-"],[class*=" icon-"]
+{
+	font-family: "paymo-icons" !important;
+	font-feature-settings: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	moz-osx-font-smoothing: grayscale;
+	speak: none;
+	text-transform: none;
+	webkit-font-smoothing: antialiased;
+}
+.icon-recurring-tasks .path1:before
+{
+	color: #00ccb3;
+	content: "�—";
+}
+.icon-recurring-tasks .path2:before
+{
+	color: #88e766;
+	content: "�Ž";
+	margin-left: -1em;
+}
+.icon-teams-tasks .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-teams-tasks .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-unscheduled-work .path1:before
+{
+	color: #00ccb3;
+	content: "�“";
+}
+.icon-unscheduled-work .path2:before
+{
+	color: #88e766;
+	content: "�”";
+	margin-left: -1em;
+}
+.icon-convert-project-into-estimate .path1:before
+{
+	color: #00ccb3;
+	content: "�•";
+}
+.icon-convert-project-into-estimate .path2:before
+{
+	color: #88e766;
+	content: "�–";
+	margin-left: -1em;
+}
+.icon-meta-kanban-board .path1:before
+{
+	color: #88e766;
+	content: "�—";
+}
+.icon-meta-kanban-board .path2:before
+{
+	color: #00ccb3;
+	content: "�˜";
+	margin-left: -1em;
+}
+.icon-task-alerts .path1:before
+{
+	color: #88e766;
+	content: "�™";
+}
+.icon-task-alerts .path2:before
+{
+	color: #00ccb3;
+	content: "�š";
+	margin-left: -1em;
+}
+.icon-task-priorities .path1:before
+{
+	color: #19d1ba;
+	content: "�›";
+}
+.icon-task-priorities .path2:before
+{
+	color: #88e766;
+	content: "�œ";
+	margin-left: -1em;
+}
+.icon-employees .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-employees .path2:before
+{
+	color: #00ccb3;
+	content: "�‚";
+	margin-left: -1em;
+}
+.icon-years-using-paymo .path1:before
+{
+	color: #00ccb3;
+	content: "�‰";
+}
+.icon-years-using-paymo .path2:before
+{
+	color: #88e766;
+	content: "�Š";
+	margin-left: -1em;
+}
+.icon-awards .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-awards .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-profit .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-profit .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-professional-help .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-professional-help .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-affordable-prices .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-affordable-prices .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-all-the-help .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-all-the-help .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1.0439453125em;
+}
+.icon-real-time-collaboration .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-real-time-collaboration .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-customizable-reports .path1:before
+{
+	color: #00ccb3;
+	content: "�™";
+}
+.icon-customizable-reports .path2:before
+{
+	color: #88e766;
+	content: "�š";
+	margin-left: -1em;
+}
+.icon-file-sharing .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-file-sharing .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-project-overview .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-project-overview .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-timesheets .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-timesheets .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-write-a-review .path1:before
+{
+	color: #88e766;
+	content: "�Ÿ";
+}
+.icon-write-a-review .path2:before
+{
+	color: #00ccb3;
+	content: "� ";
+	margin-left: -1em;
+}
+.icon-more .path1:before
+{
+	color: #00ccb3;
+	content: "�›";
+}
+.icon-more .path2:before
+{
+	color: #88e766;
+	content: "�œ";
+	margin-left: -1em;
+}
+.icon-creative-juices .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-creative-juices .path2:before
+{
+	color: #00ccb3;
+	content: "�ž";
+	margin-left: -1em;
+}
+.icon-desktop-mobile-apps .path1:before
+{
+	color: #87e766;
+	content: "�—";
+}
+.icon-desktop-mobile-apps .path2:before
+{
+	color: #00ccb3;
+	content: "�˜";
+	margin-left: -1em;
+}
+.icon-api:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-kpi-projects .path1:before
+{
+	color: #00ccb3;
+	content: "�š";
+}
+.icon-kpi-projects .path2:before
+{
+	color: #88e766;
+	content: "�›";
+	margin-left: -1em;
+}
+.icon-time-clock .path1:before
+{
+	color: #00ccb3;
+	content: "�œ";
+}
+.icon-time-clock .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-add-bulk-time .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-add-bulk-time .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-automatic-time-tracking .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-automatic-time-tracking .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-desktop-apps .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-desktop-apps .path2:before
+{
+	color: #87e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-time-tracking .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-time-tracking .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-activity-stream .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-activity-stream .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-notifications .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-notifications .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-real-time-discussions .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-real-time-discussions .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-comment-on-tasks .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-comment-on-tasks .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-kanban-boards .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-kanban-boards .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-multiuser-assignment .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-multiuser-assignment .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-task-dependencies .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-task-dependencies .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-task-duration .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-task-duration .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-task-hours-budget .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-task-hours-budget .path2:before
+{
+	color: #88e766;
+	content: "�€";
+	margin-left: -1em;
+}
+.icon-task-templates .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-task-templates .path2:before
+{
+	color: #00ccb3;
+	content: "�‚";
+	margin-left: -1em;
+}
+.icon-events-holidays .path1:before
+{
+	color: #00ccb3;
+	content: "�ƒ";
+}
+.icon-events-holidays .path2:before
+{
+	color: #88e766;
+	content: "�„";
+	margin-left: -1em;
+}
+.icon-resource-calendar-views .path1:before
+{
+	color: #00ccb3;
+	content: "�…";
+}
+.icon-resource-calendar-views .path2:before
+{
+	color: #88e766;
+	content: "�†";
+	margin-left: -1em;
+}
+.icon-resource-exceptions .path1:before
+{
+	color: #00ccb3;
+	content: "�‡";
+}
+.icon-resource-exceptions .path2:before
+{
+	color: #88e766;
+	content: "�ˆ";
+	margin-left: -1em;
+}
+.icon-resource-load-chart:before
+{
+	color: #00ccb3;
+	content: "�‰";
+}
+.icon-user-permissions .path1:before
+{
+	color: #00ccb3;
+	content: "�Š";
+}
+.icon-user-permissions .path2:before
+{
+	color: #88e766;
+	content: "�‹";
+	margin-left: -1em;
+}
+.icon-report-exporting .path1:before
+{
+	color: #00ccb3;
+	content: "�Œ";
+}
+.icon-report-exporting .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-report-sharing .path1:before
+{
+	color: #88e766;
+	content: "�Ž";
+}
+.icon-report-sharing .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-time-reports .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-time-reports .path2:before
+{
+	color: #88e766;
+	content: "�‘";
+	margin-left: -1em;
+}
+.icon-user-reports .path1:before
+{
+	color: #00ccb3;
+	content: "�’";
+}
+.icon-user-reports .path2:before
+{
+	color: #88e766;
+	content: "�“";
+	margin-left: -1em;
+}
+.icon-critical-path .path1:before
+{
+	color: #88e766;
+	content: "�”";
+}
+.icon-critical-path .path2:before
+{
+	color: #00ccb3;
+	content: "�•";
+	margin-left: -1em;
+}
+.icon-gantt-charts .path1:before
+{
+	color: #00ccb3;
+	content: "�–";
+}
+.icon-gantt-charts .path2:before
+{
+	color: #88e766;
+	content: "�—";
+	margin-left: -1em;
+}
+.icon-milestones .path1:before
+{
+	color: #88e766;
+	content: "�˜";
+}
+.icon-milestones .path2:before
+{
+	color: #00ccb3;
+	content: "�™";
+	margin-left: -1em;
+}
+.icon-portfolio-gantt .path1:before
+{
+	color: #00ccb3;
+	content: "�š";
+}
+.icon-portfolio-gantt .path2:before
+{
+	color: #88e766;
+	content: "�›";
+	margin-left: -1em;
+}
+.icon-project-template .path1:before
+{
+	color: #00ccb3;
+	content: "�œ";
+}
+.icon-project-template .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-android .path1:before
+{
+	color: #88e766;
+	content: "�ž";
+}
+.icon-android .path2:before
+{
+	color: #00ccb3;
+	content: "�Ÿ";
+	margin-left: -1em;
+}
+.icon-apple .path1:before
+{
+	color: #00ccb3;
+	content: "� ";
+}
+.icon-apple .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-create-estimates .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-create-estimates .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-create-invoices .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-create-invoices .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-direct-payments .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-direct-payments .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-email-templates .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-email-templates .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-multi-language-invoices .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-multi-language-invoices .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-recurring-profiles .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-recurring-profiles .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-billing-priorities .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-billing-priorities .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-budgeting .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-budgeting .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-expense-tracking .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-expense-tracking .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-financial-indicators .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-financial-indicators .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-fixed-price-rates .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-fixed-price-rates .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-attach-files:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-file-organization .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-file-organization .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-unlimited-storage-space:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-additional-languages .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-additional-languages .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-customizable-workspace .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-customizable-workspace .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-dashboard .path1:before
+{
+	color: #00ccb3;
+	content: "�€";
+}
+.icon-dashboard .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-business .path1:before
+{
+	color: #88e766;
+	content: "�Ÿ";
+}
+.icon-business .path2:before
+{
+	color: #00ccb3;
+	content: "� ";
+	margin-left: -1em;
+}
+.icon-small-office .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-small-office .path2:before
+{
+	color: #00ccb3;
+	content: "";
+	margin-left: -1em;
+}
+.icon-quotation-marks:before
+{
+	color: #00ccb3;
+	content: "�€";
+}
+.icon-blame-game .path1:before
+{
+	color: #00ccb3;
+	content: "�ƒ";
+}
+.icon-blame-game .path2:before
+{
+	color: #88e766;
+	content: "�„";
+	margin-left: -1em;
+}
+.icon-keep-informed .path1:before
+{
+	color: #00ccb3;
+	content: "�‡";
+}
+.icon-keep-informed .path2:before
+{
+	color: #88e766;
+	content: "�ˆ";
+	margin-left: -1em;
+}
+.icon-manage-projects .path1:before
+{
+	color: #00ccb3;
+	content: "�‰";
+}
+.icon-manage-projects .path2:before
+{
+	color: #88e766;
+	content: "�Š";
+	margin-left: -1em;
+}
+.icon-task-management .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-task-management .path2:before
+{
+	color: #88e766;
+	content: "�‘";
+	margin-left: -1em;
+}
+.icon-kpi-billed .path1:before
+{
+	color: #00ccb3;
+	content: "�˜";
+}
+.icon-kpi-billed .path2:before
+{
+	color: #88e766;
+	content: "�™";
+	margin-left: -1em;
+}
+.icon-arrow:before
+{
+	color: #00ccb3;
+	content: "�ž";
+}
+.icon-product-files-discussions .path1:before
+{
+	color: #00ccb3;
+	content: "�‹";
+}
+.icon-product-files-discussions .path2:before
+{
+	color: #88e766;
+	content: "�Œ";
+	margin-left: -1em;
+}
+.icon-product-project-templates .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-product-project-templates .path2:before
+{
+	color: #88e766;
+	content: "�Ž";
+	margin-left: -1em;
+}
+.icon-company-industry .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-company-industry .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-company-location .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-company-location .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-company-name .path1:before
+{
+	color: #88e766;
+	content: "";
+}
+.icon-company-name .path2:before
+{
+	color: #00ccb3;
+	content: "�€";
+	margin-left: -1em;
+}
+.icon-product-recurring-invoices .path1:before
+{
+	color: #00ccb3;
+	content: "�ƒ";
+}
+.icon-product-recurring-invoices .path2:before
+{
+	color: #88e766;
+	content: "�„";
+	margin-left: -1em;
+}
+.icon-product-timesheets .path1:before
+{
+	color: #00ccb3;
+	content: "�…";
+}
+.icon-product-timesheets .path2:before
+{
+	color: #88e766;
+	content: "�†";
+	margin-left: -1em;
+}
+.icon-task-management-simple .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-task-management-simple .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-customization:before
+{
+	color: #00ccb3;
+	content: "�‚";
+}
+.icon-file-management .path1:before
+{
+	color: #88e766;
+	content: "�ƒ";
+}
+.icon-file-management .path2:before
+{
+	color: #00ccb3;
+	content: "�„";
+	margin-left: -1em;
+}
+.icon-financial-management .path1:before
+{
+	color: #00ccb3;
+	content: "�…";
+}
+.icon-financial-management .path2:before
+{
+	color: #88e766;
+	content: "�†";
+	margin-left: -1em;
+}
+.icon-mobile .path1:before
+{
+	color: #88e766;
+	content: "�‡";
+}
+.icon-mobile .path2:before
+{
+	color: #00ccb3;
+	content: "�ˆ";
+	margin-left: -1em;
+}
+.icon-resource-management:before
+{
+	color: #00ccb3;
+	content: "�‰";
+}
+.icon-team-collaboration:before
+{
+	color: #00ccb3;
+	content: "�Š";
+}
+.icon-getting-paid .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-getting-paid .path2:before
+{
+	color: #88e766;
+	content: "�Ž";
+	margin-left: -1em;
+}
+.icon-integrate:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-team-scheduling .path1:before
+{
+	color: #00ccb3;
+	content: "�’";
+}
+.icon-team-scheduling .path2:before
+{
+	color: #88e766;
+	content: "�“";
+	margin-left: -1em;
+}
+.icon-timesheet-reports .path1:before
+{
+	color: #00ccb3;
+	content: "�”";
+}
+.icon-timesheet-reports .path2:before
+{
+	color: #88e766;
+	content: "�•";
+	margin-left: -1em;
+}
+.icon-track-work-time .path1:before
+{
+	color: #00ccb3;
+	content: "";
+}
+.icon-track-work-time .path2:before
+{
+	color: #88e766;
+	content: "";
+	margin-left: -1em;
+}
+.icon-read-time:before
+{
+	color: #88e766;
+	content: "�–";
+}
