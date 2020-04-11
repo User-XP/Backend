@@ -3,16 +3,23 @@
 */
 
 const router  = require('express').Router();
-const Project = require('../models/project-model');
+const {Project} = require('../models/project-model');
+const {Test} = require('../models/project-model');
+
 
 router.post('/api/v1/submit', (req,res) => {
     //use body parser, get the data, validate, store data, send response
-    new Project({
-        email: 'demo@example.com',
-        noOfProjects: '1',
-        testers: [{'name':'shan','values':[2,3,4,5,5]}]
-    }).save().then(project => {
-        console.log('new project created')
+    const testData = JSON.parse(req.body.userXPTrackingData)
+    new Test({
+        projectID: testData.projectID,
+        date: testData.date,
+        page: testData.page,
+        browserWidth: testData.browserWidth,
+        browserHeight: testData.browserHeight,
+        tester: testData.tester,
+        data: testData.data
+    }).save().then(test => {
+        console.log('new test document added successfully')
         res.status(200).send('Submitted successfully!')
     })
 })
