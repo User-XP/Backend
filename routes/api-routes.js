@@ -16,11 +16,20 @@ router.post('/api/v1/submit', (req,res) => {
         page: testData.page,
         browserWidth: testData.browserWidth,
         browserHeight: testData.browserHeight,
-        tester: testData.tester,
+        tester: {
+            name: req.body.testerName,
+            age: req.body.testerAge,
+            gender: req.body.testerSex
+        },
         data: testData.data
-    }).save().then(test => {
-        console.log('new test document added successfully')
+    }).save()
+    .then(test => {
+        console.log('new test document added successfully', test)
         res.status(200).send('Submitted successfully!')
+    })
+    .catch((err) => {
+        console.log('recieved invalid data ')
+        res.status(400).send('Unsucessful: ' + err.message)
     })
 })
 

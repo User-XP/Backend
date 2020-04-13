@@ -8,14 +8,19 @@ const projectSchema = new Schema({
     noOfProjects: String,
     testers: Array,
 })
+
 const testSchema = new Schema({
-    projectID: String,
+    projectID: {type: String, required: true},
     date: String,
     page: String,
-    browserWidth: String,
-    browserHeight: String,
-    tester: Object,
-    data: Array
+    browserWidth: Number,
+    browserHeight: Number,
+    tester: {
+        name: String,
+        age: { type: Number, min: 10, max: 90 },
+        gender: String
+    },
+    data: {type: Array, required: true}
 })
 
 const Project = mongoose.model('projects', projectSchema);
