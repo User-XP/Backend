@@ -18,3 +18,5 @@ Visit [https://developers.google.com/identity/sign-in/web/sign-in#before_you_beg
  }
  ```  
 3. Run `node app`
+
+**Note: Make sure to keep the database running first.**
