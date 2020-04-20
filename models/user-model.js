@@ -9,7 +9,6 @@ const userSchema = new Schema({
     googleID: String
 })
 
-//specify the collection to be used
 const User = mongoose.model('users', userSchema);
 
-module.exports = User;
+module.exports = User
