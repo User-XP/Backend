@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="author" content="UserXP">
+    <title>UserXP-Dashboard</title>
+    <link rel="apple-touch-icon" href="dashboard/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="dashboard/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/vendors/css/vendors.min.css">
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="dashboard/app-assets/css/pages/knowledge-base.css">
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="dashboard/assets/css/style.css">
+
+</head>
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern dark-layout 2-columns  navbar-floating footer-static  "
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="dark-layout">
+
+    <!-- BEGIN: Header-->
+    <%- include('../partials/header') %>
+
+    <!-- BEGIN: Main Menu-->
+    <%- include('../partials/main-menu') %>
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Projects</h2> 
+                            <button type="button" class="btn btn-icon  btn-primary mr-1 mb-1" data-toggle="modal"
+                            data-target="#inlineForm">
+                                <i class="feather icon-plus-circle"></i></button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- Knowledge base Jumbotron -->
+                <!-- <section id="knowledge-base-search">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card knowledge-base-bg white">
+                                <div class="card-content">
+                                    <div class="card-body p-sm-4 p-2">
+                                        <h1 class="white">Dedicated Source Used on Website</h1>
+                                        <p class="card-text mb-2">
+                                            Bonbon sesame snaps lemon drops marshmallow ice cream carrot cake croissant wafer.
+                                        </p>
+                                        <form>
+                                            <fieldset class="form-group position-relative has-icon-left mb-0">
+                                                <input type="text" class="form-control form-control-lg" id="searchbar" placeholder="Search Topic or Keyword">
+                                                <div class="form-control-position">
+                                                    <i class="feather icon-search px-1"></i>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <!-- Knowledge base Jumbotron ends -->
+                <!-- Knowledge base -->
+                <section id="knowledge-base-content">
+                    <div class="row search-content-info">
+                        <div class="col-md-4 col-sm-6 col-12 search-content">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <a href="project-page.html">
+                                        <img src="dashboard/app-assets/images/pages/graphic-1.png" class="mx-auto mb-2"
+                                            width="180" alt="knowledge-base-image">
+                                        <h4>Project 1</h4>
+                                        <small class="text-dark">Muffin lemon drops chocolate carrot cake chocolate bar
+                                            sweet roll.</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12 search-content">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <a href="project-page.html">
+                                        <img src="dashboard/app-assets/images/pages/graphic-2.png" class="mx-auto mb-2"
+                                            width="180" alt="knowledge-base-image">
+                                        <h4>Project 2</h4>
+                                        <small class="text-dark">Gingerbread sesame snaps wafer soufflé. Macaroon
+                                            brownie ice cream</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12 search-content">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <a href="project-page.html">
+                                        <img src="dashboard/app-assets/images/pages/graphic-3.png" class="mx-auto mb-2"
+                                            width="180" alt="knowledge-base-image">
+                                        <h4>Project 3</h4>
+                                        <small class="text-dark">cotton candy caramels danish chocolate cake pie candy.
+                                            Lemon drops tart.</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Knowledge base ends -->
+                <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel33" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel33">Add New Project
+                                    </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="#">
+                                    <div class="modal-body">
+                                        <label>Project Name </label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Name" class="form-control">
+                                        </div>
+
+                                        <label>Project URL</label>
+                                        <div class="form-group">
+                                            <input type="url" placeholder="URL" class="form-control">
+                                        </div>
+
+                                        <label>No: of Testers</label>
+                                        <div class="form-group">
+                                            <input type="number" placeholder="No: of testers" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Create
+                                            Project</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+
+    <!-- BEGIN: Footer-->
+  <%- include('../partials/footer') %>
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="dashboard/app-assets/vendors/js/vendors.min.js"></script>
+
+    <!-- BEGIN: Theme JS-->
+    <script src="dashboard/app-assets/js/core/app-menu.js"></script>
+    <script src="dashboard/app-assets/js/core/app.js"></script>
+    <script src="dashboard/app-assets/js/scripts/components.js"></script>
+
+    <!-- BEGIN: Page JS-->
+    <script src="dashboard/app-assets/js/scripts/pages/faq-kb.js"></script>
+
+</body>
+</html>

@@ -10,12 +10,12 @@ const authCheck = (req,res,next) => {
     }
 };
 
-router.get('/settings',authCheck,(req,res) => {
-    res.send('This is the settings page');
+router.get('/projects',authCheck,(req,res) => {
+    res.render('./dashboard/project.ejs',{user: req.user}); 
 })
 
 router.get('/',authCheck,(req,res) => {
-    res.render('dashboard.ejs',{user: req.user});
+    res.render('./dashboard/index.ejs',{user: req.user});
 })
 
 module.exports = router;

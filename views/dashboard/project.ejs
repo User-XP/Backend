@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="author" content="UserXP">
+    <title>UserXP-Dashboard</title>
+    <link rel="apple-touch-icon" href="/dashboard/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/dashboard/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+     <!-- BEGIN: Vendor CSS-->
+     <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/vendors.min.css">
+     <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/ui/prism.min.css">
+ 
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/pages/knowledge-base.css">
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/dashboard/assets/css/style.css">
+
+</head>
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern dark-layout 2-columns  navbar-floating footer-static  "
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="dark-layout">
+    <!-- BEGIN: Header-->
+    <%- include('../partials/header') %>
+
+    <!-- BEGIN: Main Menu-->
+    <%- include('../partials/main-menu') %>
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- page users view start -->
+                <section class="page-users-view">
+                    <div class="row">
+                        <!-- account start -->
+                        <!-- information start -->
+                        <div class="col-md-6 col-12 ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title mb-2">Tracking Code</div>
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        Add the following code just below the closing head tag.
+                                    </p>
+                                    <pre>
+                                        <code class="language-html">
+                                            &lt;script&gt;
+                                            var UXQ = UXQ || {};
+                                            UXQ['projectID'] = &quot;UX-73636&quot;;
+                                            UXQ['track'] = ['clicks'];
+                                            &lt;/script&gt;
+                                        </code>
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- information start -->
+                        <!-- social links end -->
+                        <div class="col-md-6 col-12 ">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between pb-0">
+                                    <h4 class="card-title">User Demographics</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body py-0">
+                                        <div id="customer-chart"></div>
+                                    </div>
+                                    <ul class="list-group list-group-flush customer-info">
+                                        <li class="list-group-item d-flex justify-content-between ">
+                                            <div class="series-info">
+                                                <i class="fa fa-circle font-small-3 text-primary"></i>
+                                                <span class="text-bold-600">New</span>
+                                            </div>
+                                            <div class="product-result">
+                                                <span>890</span>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between ">
+                                            <div class="series-info">
+                                                <i class="fa fa-circle font-small-3 text-warning"></i>
+                                                <span class="text-bold-600">Returning</span>
+                                            </div>
+                                            <div class="product-result">
+                                                <span>258</span>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between ">
+                                            <div class="series-info">
+                                                <i class="fa fa-circle font-small-3 text-danger"></i>
+                                                <span class="text-bold-600">Referrals</span>
+                                            </div>
+                                            <div class="product-result">
+                                                <span>149</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- social links end -->
+
+                    </div>
+                </section>
+                <!-- page users view end -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+
+    <!-- BEGIN: Footer-->
+  <%- include('../partials/footer') %>
+
+   <!-- BEGIN: Vendor JS-->
+   <script src="/dashboard/app-assets/vendors/js/vendors.min.js"></script>
+   <!-- BEGIN Vendor JS-->
+
+   <!-- BEGIN: Page Vendor JS-->
+   <script src="/dashboard/app-assets/vendors/js/charts/apexcharts.min.js"></script>
+   <script src="/dashboard/app-assets/vendors/js/ui/prism.min.js"></script>
+   <!-- END: Page Vendor JS-->
+
+   <!-- BEGIN: Theme JS-->
+   <script src="/dashboard/app-assets/js/core/app-menu.js"></script>
+   <script src="/dashboard/app-assets/js/core/app.js"></script>
+   <script src="/dashboard/app-assets/js/scripts/components.js"></script>
+   <!-- END: Theme JS-->
+
+   <!-- BEGIN: Page JS-->
+   <script src="/dashboard/app-assets/js/scripts/pages/app-user.js"></script>
+   <script src="/dashboard/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+   <!-- END: Page JS-->
+
+
+</body>
+</html>
