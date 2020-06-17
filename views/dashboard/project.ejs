@@ -69,9 +69,10 @@
                                         <code class="language-html">
                                             &lt;script&gt;
                                             var UXQ = UXQ || {};
-                                            UXQ['projectID'] = &quot;UX-73636&quot;;
+                                            UXQ['projectID'] = &quot;<%=id%>&quot;;
                                             UXQ['track'] = ['clicks'];
                                             &lt;/script&gt;
+                                            &lt;script defer src="https://userxp.ga/userXP.js"&gt;&lt;/script&gt;
                                         </code>
                                         </pre>
                                 </div>
@@ -135,7 +136,7 @@
 
     <!-- BEGIN: Footer-->
   <%- include('../partials/footer') %>
-
+  
    <!-- BEGIN: Vendor JS-->
    <script src="/dashboard/app-assets/vendors/js/vendors.min.js"></script>
    <!-- BEGIN Vendor JS-->

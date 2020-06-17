@@ -4,9 +4,12 @@ const Schema = mongoose.Schema
 // Project Schema
 
 const projectSchema = new Schema({
+    ID: String,
+    url: String,
+    name: String,
     email: String,
     noOfProjects: String,
-    testers: Array,
+    testers: Array
 })
 
 const testSchema = new Schema({
