@@ -35,7 +35,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern dark-layout 2-columns  navbar-floating footer-static  "
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  "
     data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="dark-layout">
     <!-- BEGIN: Header-->
     <%- include('../partials/header') %>
@@ -123,6 +123,40 @@
                         </div>
                         <!-- social links end -->
 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12 ">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between pb-0">
+                                    <h4 class="card-title">Test Details</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body py-0">
+                                        <div id="customer-chart"></div>
+                                    </div>
+                                    <ul class="list-group list-group-flush customer-info">
+                                        
+                        <% if (test.status == 'ok') { %>
+                            <% for(var i=0; i < test.tests.length; i++) { %>
+                                <li class="list-group-item d-flex justify-content-between ">
+                                    <div class="series-info">
+                                        <span class="text-bold-600"> <%=test.tests[i].tester.name%></span>
+                                    </div>
+                                    <div class="product-result">
+                                        <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>" target="_blank">View Report</a>
+                                    </div>
+                                </li>  
+                             <% } %>
+                        <%} else { %>
+                            <p> No testers yet </p>
+                        <% } %>
+                          <!-- testers  -->
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- testers -->
                     </div>
                 </section>
                 <!-- page users view end -->
