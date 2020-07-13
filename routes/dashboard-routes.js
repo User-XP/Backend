@@ -18,23 +18,45 @@ router.get('/projects/:id/test/:test_id',authCheck,(req,res) => {
     res.render('./dashboard/report.ejs',{ user: req.user, test_id: req.params.test_id}); 
 })
 
-router.get('/projects/:id',authCheck,(req,res) => {
-    //TO DO 
-    // ONLY FETCH IDS for the corresponding projects
-   
-    Test.find({
-        projectID: req.params.id 
-    }, async (err, tests) => {
-        if(err){
-            console.log(err);
-        }
-        if (tests.length > 0){
-            res.render('./dashboard/project.ejs',{user: req.user, id: req.params.id, test: {status: 'ok', tests: tests}}); 
-        }else{
-            res.render('./dashboard/project.ejs',{user: req.user, id: req.params.id, test: {status: 'empty'}}); 
+router.get('/projects/:id', authCheck, (req, res) => {
+
+    Project.find({
+        email: req.user.email,
+        ID: req.params.id
+    }, async (err, project) => {
+        if (err) console.log(err);
+        if (project.length > 0) {
+            // The current logged in user is authorized to view the project.
+            // So load the testers and render the page
+            Test.find({
+                projectID: req.params.id
+            }, async (err, tests) => {
+                if (err) {
+                    console.log(err);
+                }
+                if (tests.length > 0) {
+                    res.render('./dashboard/project.ejs', {
+                        user: req.user,
+                        id: req.params.id,
+                        test: {
+                            status: 'ok',
+                            tests: tests
+                        }
+                    });
+                } else {
+                    res.render('./dashboard/project.ejs', {
+                        user: req.user,
+                        id: req.params.id,
+                        test: {
+                            status: 'empty'
+                        }
+                    });
+                }
+            });
+        } else {
+            res.status(404).send("Sorry, can't find what you're looking for!");
         }
     });
-   
 })
 
 router.get('/',authCheck,(req,res) => {
