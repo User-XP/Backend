@@ -54,8 +54,8 @@ router.get('/projects/:id', authCheck, (req, res) => {
                 }
             });
         } else {
-            res.status(404).send("Sorry, can't find what you're looking for!");
-        }
+            res.render('./dashboard/error-404.ejs');
+            }
     });
 })
 
