@@ -18,7 +18,7 @@
     <script src="https://d48dl6cezsco5.cloudfront.net/assets/6.0.3/assets/js/concat_app_html.js"></script>
 </head>
 
-<body class="theme-sdtl color-default">
+<body class="theme-sdtl color-default"><h1>Tester: <%=test.tester.name%></h1>
     <div class="loader-overlay loaded">
         <div class="spinner">
             <div class="bounce1"></div>
@@ -286,6 +286,11 @@
         heatMaps['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].max(100);
         heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'] = [];
         testsCount['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'] = 1;
+
+                <% for(var i=0; i < test.data.length; i++) { %>
+                    heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].push([<%=test.data[i][0]%>,<%=test.data[i][1]%>,<%=test.data[i][3]%>,<%=test.data[i][2]%>]);
+                <% } %>
+/*
         heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].push([Math.round(53.61 * 1680 / 100), Math.round(8.72 * 7346 /
             100), 10, 33]);
         heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].push([Math.round(69.86 * 1680 / 100), Math.round(9.66 * 7346 /
@@ -1083,7 +1088,7 @@
         heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].push([Math.round(47.29 * 1680 / 100), Math.round(50.39 * 7346 /
             100), 10, 14972]);
         heatData['a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa'].push([Math.round(49.72 * 1680 / 100), Math.round(50.63 * 7346 /
-            100), 10, 15006]);
+            100), 10, 15006]);*/
         drawHeatMap('a5dfd11f-fabb-4f82-9ed9-1dbc5a19efaa', 'color', 100);
         heatMaps['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'] = simpleheat('heatmap-2a473f29-0b0a-4cc8-9927-4e0ac909f11f');
         heatMaps['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].radius(75, 5);

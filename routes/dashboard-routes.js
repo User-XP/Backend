@@ -15,7 +15,13 @@ router.get('/reports',authCheck,(req,res) => {
     res.render('./dashboard/report.ejs',{user: req.user});
 })
 router.get('/projects/:id/test/:test_id',authCheck,(req,res) => {
-    res.render('./dashboard/report.ejs',{ user: req.user, test_id: req.params.test_id}); 
+    Test.findOne({_id: req.params.test_id}, async (err, testDetails) => {
+        if(err) {
+            console.log(err)
+        }else{
+            res.render('./dashboard/report.ejs',{ user: req.user, test: testDetails}); 
+        };
+    })
 })
 
 router.get('/projects/:id', authCheck, (req, res) => {
