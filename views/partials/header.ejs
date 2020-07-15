@@ -8,13 +8,57 @@
                                 class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i
                                     class="ficon feather icon-menu"></i></a></li>
                     </ul>
-                    <ul class="nav navbar-nav bookmark-icons">
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html"
-                                data-toggle="tooltip" data-placement="top" title="Email"><i
-                                    class="ficon feather icon-mail"></i></a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calender.html"
-                                data-toggle="tooltip" data-placement="top" title="Calendar"><i
-                                    class="ficon feather icon-calendar"></i></a></li>
+                    <ul class="nav navbar-nav bookmark-icons">                        
+                        <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                    <input class="input" type="text" placeholder="Search Projects..." tabindex="-1" data-search="template-list">
+                                    <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                    <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">4</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <div class="dropdown-header m-0 p-2">
+                                        <h3 class="white">4 New Notifications</h3>
+                                    </div>
+                                </li>
+                                <li class="scrollable-container media-list"><a href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-plus-square font-medium-5 primary"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="primary media-heading">New Project Added!</h6>
+                                            </div><small>
+                                                <time class="media-meta">5 minutes ago</time></small>
+                                        </div>                            
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-alert-triangle font-medium-5 danger"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="danger media-heading yellow darken-3">Warning notifixation</h6><small class="notification-text">No. of Tester's Limit approching!!</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-check-circle font-medium-5 info"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="info media-heading">Complete the task</h6>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last week</time></small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-file font-medium-5 warning"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="warning media-heading">Report Generated</h6><small class="notification-text">New tester report generated</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last month</time></small>
+                                        </div>
+                                    </a></li>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">View all notifications</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <ul class="nav navbar-nav float-right">
