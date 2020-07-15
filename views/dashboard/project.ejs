@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/dashboard/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/vendors.min.css">
-     <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/ui/prism.min.css">
- 
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/vendors/css/ui/prism.min.css">
+
 
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="/dashboard/app-assets/css/bootstrap.css">
@@ -93,30 +94,22 @@
                                         <li class="list-group-item d-flex justify-content-between ">
                                             <div class="series-info">
                                                 <i class="fa fa-circle font-small-3 text-primary"></i>
-                                                <span class="text-bold-600">New</span>
+                                                <span class="text-bold-600">Male</span>
                                             </div>
                                             <div class="product-result">
-                                                <span>890</span>
+                                                <span>11</span>
                                             </div>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between ">
                                             <div class="series-info">
                                                 <i class="fa fa-circle font-small-3 text-warning"></i>
-                                                <span class="text-bold-600">Returning</span>
+                                                <span class="text-bold-600">Female</span>
                                             </div>
                                             <div class="product-result">
-                                                <span>258</span>
+                                                <span>4</span>
                                             </div>
                                         </li>
-                                        <li class="list-group-item d-flex justify-content-between ">
-                                            <div class="series-info">
-                                                <i class="fa fa-circle font-small-3 text-danger"></i>
-                                                <span class="text-bold-600">Referrals</span>
-                                            </div>
-                                            <div class="product-result">
-                                                <span>149</span>
-                                            </div>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -135,23 +128,24 @@
                                         <div id="customer-chart"></div>
                                     </div>
                                     <ul class="list-group list-group-flush customer-info">
-                                        
-                        <% if (test.status == 'ok') { %>
-                            <% for(var i=0; i < test.tests.length; i++) { %>
-                                <li class="list-group-item d-flex justify-content-between ">
-                                    <div class="series-info">
-                                        <span class="text-bold-600"> <%=test.tests[i].tester.name%></span>
-                                    </div>
-                                    <div class="product-result">
-                                        <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>" target="_blank">View Report</a>
-                                    </div>
-                                </li>  
-                             <% } %>
-                        <%} else { %>
-                            <p> No testers yet </p>
-                        <% } %>
-                          <!-- testers  -->
-                                        
+
+                                        <% if (test.status == 'ok') { %>
+                                        <% for(var i=0; i < test.tests.length; i++) { %>
+                                        <li class="list-group-item d-flex justify-content-between ">
+                                            <div class="series-info">
+                                                <span class="text-bold-600"> <%=test.tests[i].tester.name%></span>
+                                            </div>
+                                            <div class="product-result">
+                                                <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>"
+                                                    target="_blank">View Report</a>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                        <%} else { %>
+                                        <p> No testers yet </p>
+                                        <% } %>
+                                        <!-- testers  -->
+
                                     </ul>
                                 </div>
                             </div>
@@ -169,28 +163,96 @@
     <div class="sidenav-overlay"></div>
 
     <!-- BEGIN: Footer-->
-  <%- include('../partials/footer') %>
-  
-   <!-- BEGIN: Vendor JS-->
-   <script src="/dashboard/app-assets/vendors/js/vendors.min.js"></script>
-   <!-- BEGIN Vendor JS-->
+    <%- include('../partials/footer') %>
 
-   <!-- BEGIN: Page Vendor JS-->
-   <script src="/dashboard/app-assets/vendors/js/charts/apexcharts.min.js"></script>
-   <script src="/dashboard/app-assets/vendors/js/ui/prism.min.js"></script>
-   <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Vendor JS-->
+    <script src="/dashboard/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
 
-   <!-- BEGIN: Theme JS-->
-   <script src="/dashboard/app-assets/js/core/app-menu.js"></script>
-   <script src="/dashboard/app-assets/js/core/app.js"></script>
-   <script src="/dashboard/app-assets/js/scripts/components.js"></script>
-   <!-- END: Theme JS-->
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/dashboard/app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="/dashboard/app-assets/vendors/js/ui/prism.min.js"></script>
+    <!-- END: Page Vendor JS-->
 
-   <!-- BEGIN: Page JS-->
-   <script src="/dashboard/app-assets/js/scripts/pages/app-user.js"></script>
-   <script src="/dashboard/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
-   <!-- END: Page JS-->
+    <!-- BEGIN: Theme JS-->
+    <script src="/dashboard/app-assets/js/core/app-menu.js"></script>
+    <script src="/dashboard/app-assets/js/core/app.js"></script>
+    <script src="/dashboard/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="/dashboard/app-assets/js/scripts/pages/app-user.js"></script>
+
+    <script>
+        /*=========================================================================================
+    File Name: dashboard-ecommerce.js
+    
+    */
+
+        $(window).on("load", function () {
+
+            var $primary = '#7367F0';
+            var $success = '#28C76F';
+            var $danger = '#EA5455';
+            var $warning = '#FF9F43';
+            var $info = '#00cfe8';
+            var $primary_light = '#A9A2F6';
+            var $danger_light = '#f29292';
+            var $success_light = '#55DD92';
+            var $warning_light = '#ffc085';
+            var $info_light = '#1fcadb';
+            var $strok_color = '#b9c3cd';
+            var $label_color = '#e7e7e7';
+            var $white = '#fff';
 
 
+            // Customer Chart
+            // -----------------------------
+
+            var customerChartoptions = {
+                chart: {
+                    type: 'pie',
+                    height: 330,
+                    dropShadow: {
+                        enabled: false,
+                        blur: 5,
+                        left: 1,
+                        top: 1,
+                        opacity: 0.2
+                    },
+                    toolbar: {
+                        show: false
+                    }
+                },
+                labels: ['Male', 'Female'],
+                series: [34, 23],
+                dataLabels: {
+                    enabled: false
+                },
+                legend: {
+                    show: false
+                },
+                stroke: {
+                    width: 5
+                },
+                colors: [$primary, $warning],
+                fill: {
+                    type: 'solid',
+                    gradient: {
+                        gradientToColors: [$primary_light, $warning_light]
+                    }
+                }
+            }
+
+            var customerChart = new ApexCharts(
+                document.querySelector("#customer-chart"),
+                customerChartoptions);
+
+            customerChart.render();
+
+        });
+
+    </script>
 </body>
+
 </html>
