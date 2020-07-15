@@ -49,6 +49,11 @@ app.use('/dashboard',dashboardRoutes);
 app.use(apiRoutes);
 app.use(express.static('public'));
 
+// 404 Page as the last route
+app.get('*', function(req, res){
+	res.status(404).render('dashboard/error-404.ejs');
+});
+
 app.listen(3000, function(){
 	console.log("server listening at port 3000");
 })
