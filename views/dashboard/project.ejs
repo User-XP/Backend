@@ -97,7 +97,7 @@
                                                 <span class="text-bold-600">Male</span>
                                             </div>
                                             <div class="product-result">
-                                                <span>11</span>
+                                                <span>34</span>
                                             </div>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between ">
@@ -106,7 +106,7 @@
                                                 <span class="text-bold-600">Female</span>
                                             </div>
                                             <div class="product-result">
-                                                <span>4</span>
+                                                <span>23</span>
                                             </div>
                                         </li>
 
@@ -116,42 +116,56 @@
                         </div>
                         <!-- social links end -->
 
-                    </div>
+                    </div>                
+                    <!-- Table displaying details of all the testers -->
                     <div class="row">
-                        <div class="col-md-6 col-12 ">
+                        <div class="col-12">
                             <div class="card">
-                                <div class="card-header d-flex justify-content-between pb-0">
-                                    <h4 class="card-title">Test Details</h4>
+                                <div class="card-header">
+                                    <h4 class="mb-0">Test Details</h4>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body py-0">
-                                        <div id="customer-chart"></div>
+                                    <div class="table-responsive mt-1">
+                                        <table class="table table-hover-animation mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Age</th>
+                                                    <th>Gender</th>
+                                                    <th>Browser Width</th>
+                                                    <th>Browser Height</th>
+                                                    <th>View Report</th>                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% if (test.status == 'ok') { %>
+                                                    <% for(var i=0; i < test.tests.length; i++) { %>
+                                                <tr>
+                                                    <td><%=test.tests[i].tester.name%></td>
+                                                    <td><%=test.tests[i].tester.age%></td>
+                                                    <td><%=test.tests[i].tester.gender%></td>
+                                                    <td><%=test.tests[i].browserWidth%></td>
+                                                    <td><%=test.tests[i].browserHeight%></td>
+                                                    <td>
+                                                        <div class="product-result">
+                                                            <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>"
+                                                                target="_blank">View Report</a>
+                                                        </div>
+                                                    </td>                                                    
+                                                </tr>
+                                                <% } %>
+                                                <%} else { %>
+                                                <p> No testers yet </p>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <ul class="list-group list-group-flush customer-info">
-
-                                        <% if (test.status == 'ok') { %>
-                                        <% for(var i=0; i < test.tests.length; i++) { %>
-                                        <li class="list-group-item d-flex justify-content-between ">
-                                            <div class="series-info">
-                                                <span class="text-bold-600"> <%=test.tests[i].tester.name%></span>
-                                            </div>
-                                            <div class="product-result">
-                                                <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>"
-                                                    target="_blank">View Report</a>
-                                            </div>
-                                        </li>
-                                        <% } %>
-                                        <%} else { %>
-                                        <p> No testers yet </p>
-                                        <% } %>
-                                        <!-- testers  -->
-
-                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <!-- testers -->
                     </div>
+                    <!-- End of testers table -->
+                    <a class="btn btn-primary btn-lg mt-2" href="#">Delete Project</a>
                 </section>
                 <!-- page users view end -->
 
