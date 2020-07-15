@@ -53,4 +53,22 @@ router.post('/api/v1/newProject', (req, res) => {
     })
 })
 
+// Deleting Project
+router.delete('/api/v1/delete/:id', (req, res) => {
+   
+    Project.deleteOne({
+        ID: req.params.id
+    }, function(err, result){
+        //
+    });
+
+    Test.deleteMany({
+        projectID: req.params.id
+    }, function(err, result){
+       //
+    });
+
+    res.send('Successfully deleted');
+
+})
 module.exports = router;

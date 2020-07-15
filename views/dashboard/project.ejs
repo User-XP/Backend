@@ -116,7 +116,7 @@
                         </div>
                         <!-- social links end -->
 
-                    </div>                
+                    </div>
                     <!-- Table displaying details of all the testers -->
                     <div class="row">
                         <div class="col-12">
@@ -134,12 +134,12 @@
                                                     <th>Gender</th>
                                                     <th>Browser Width</th>
                                                     <th>Browser Height</th>
-                                                    <th>View Report</th>                                                    
+                                                    <th>View Report</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <% if (test.status == 'ok') { %>
-                                                    <% for(var i=0; i < test.tests.length; i++) { %>
+                                                <% for(var i=0; i < test.tests.length; i++) { %>
                                                 <tr>
                                                     <td><%=test.tests[i].tester.name%></td>
                                                     <td><%=test.tests[i].tester.age%></td>
@@ -151,11 +151,16 @@
                                                             <a href="/dashboard/projects/UX-12345/test/<%=test.tests[i]._id%>"
                                                                 target="_blank">View Report</a>
                                                         </div>
-                                                    </td>                                                    
+                                                    </td>
                                                 </tr>
                                                 <% } %>
                                                 <%} else { %>
-                                                <p> No testers yet </p>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
                                                 <% } %>
                                             </tbody>
                                         </table>
@@ -166,34 +171,35 @@
                     </div>
                     <!-- End of testers table -->
                     <button type="button" class="btn btn-primary btn-lg mt-2" data-toggle="modal"
-                                data-target="#deleteForm">
-                                Delete Project                                
+                        data-target="#deleteForm">
+                        Delete Project
                     </button>
                     <div class="modal fade text-left" id="deleteForm" tabindex="-1" role="dialog"
-                    aria-labelledby="myModalLabel33" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel33">Are you sure u want to delete?
-                                </h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <form action="#">
-                                <div class="modal-body">
-                                    <label>Enter the Project ID to delete </label>
-                                    <div class="form-group">
-                                        <input type="text" id='project-id' placeholder="Project ID" class="form-control">
-                                    </div>                                    
-                                <div class="modal-footer">
-                                    <button type="button" id="deleteProject" class="btn btn-primary"
-                                        data-dismiss="modal">Delete Project</button>
+                        aria-labelledby="myModalLabel33" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel33">Are you sure u want to delete?
+                                    </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                            </form>
+                                <form action="#">
+                                    <div class="modal-body">
+                                        <label>Type the Project ID [<%=id%>] to confirm delete </label>
+                                        <div class="form-group">
+                                            <input type="text" id='project-id' placeholder="Project ID"
+                                                class="form-control">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="deleteProject" class="btn btn-primary"
+                                                data-dismiss="modal">Delete</button>
+                                        </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>                 
                 </section>
                 <!-- page users view end -->
 
@@ -292,6 +298,20 @@
 
             customerChart.render();
 
+        });
+
+        $('#deleteProject').click(function () {
+            //The below logic is that you can delete only the project you're currently on and not any other
+            if (window.location.href.endsWith($('#project-id').val())) {
+
+                $.ajax({
+                    url: '/api/v1/delete/<%=id%>',
+                    type: 'DELETE',
+                    success: function (result) {
+                        window.location.href = "/dashboard";
+                    }
+                });
+            }
         });
 
     </script>
