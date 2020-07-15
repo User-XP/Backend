@@ -165,7 +165,35 @@
                         </div>
                     </div>
                     <!-- End of testers table -->
-                    <a class="btn btn-primary btn-lg mt-2" href="#">Delete Project</a>
+                    <button type="button" class="btn btn-primary btn-lg mt-2" data-toggle="modal"
+                                data-target="#deleteForm">
+                                Delete Project                                
+                    </button>
+                    <div class="modal fade text-left" id="deleteForm" tabindex="-1" role="dialog"
+                    aria-labelledby="myModalLabel33" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel33">Are you sure u want to delete?
+                                </h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="#">
+                                <div class="modal-body">
+                                    <label>Enter the Project ID to delete </label>
+                                    <div class="form-group">
+                                        <input type="text" id='project-id' placeholder="Project ID" class="form-control">
+                                    </div>                                    
+                                <div class="modal-footer">
+                                    <button type="button" id="deleteProject" class="btn btn-primary"
+                                        data-dismiss="modal">Delete Project</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>                 
                 </section>
                 <!-- page users view end -->
 
