@@ -1095,6 +1095,7 @@
         heatMaps['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].max(100);
         heatData['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'] = [];
         testsCount['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'] = 1;
+        /*
         heatData['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].push([Math.round(53.61 * 1680 / 100), Math.round(8.72 * 7346 /
             100), 10, 33]);
         heatData['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].push([Math.round(69.86 * 1680 / 100), Math.round(9.66 * 7346 /
@@ -1893,6 +1894,10 @@
             100), 10, 14972]);
         heatData['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].push([Math.round(49.72 * 1680 / 100), Math.round(50.63 * 7346 /
             100), 10, 15006]);
+            */
+            <% for(var i=0; i < test.data.length; i++) { %>
+                    heatData['2a473f29-0b0a-4cc8-9927-4e0ac909f11f'].push([<%=test.data[i][0]%>,<%=test.data[i][1]%>,<%=test.data[i][3]%>,<%=test.data[i][2]%>]);
+                <% } %>
         drawHeatMap('2a473f29-0b0a-4cc8-9927-4e0ac909f11f', 'color', 100);
     </script>
     <script>
