@@ -258,7 +258,7 @@
                             window.location.reload()
                         },
                         error: function (a) {
-                            alert("Server error - " + a)
+                            // alert("Server error - " + a)
                         }
                     })
             }), $(".range-slider.item-slider").each(function () {
@@ -2075,7 +2075,7 @@
                     unsetLoading()
                 },
                 error: function (e) {
-                    unsetLoading(), alert("Server error - " + e)
+                    unsetLoading(), console.log("Server error - " + e)
                 }
             }), $(".share-input-trigger-recording").data("recording-url", $(".share-input-trigger-recording")
                 .data("recording-url-raw").replace("tester-id", e)))
